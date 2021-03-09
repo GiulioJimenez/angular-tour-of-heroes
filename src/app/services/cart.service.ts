@@ -9,6 +9,13 @@ export class CartService {
 
   addToCart(product) {
     this.items.push(product);
+    console.log(this.items);
+
+    let total = 0;
+    this.items.forEach(function (item) {
+      total+= item.price
+    });
+    console.log('Costo totale', total);
   }
 
   getItems() {
